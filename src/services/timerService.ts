@@ -6,7 +6,7 @@ export const submitReactionTime = async (user_id: string, time: number): Promise
 };
 
 export const getReactionTimes = async (user_id: string, sort: string, filter: any): Promise<ITimer[]> => {
-    const query = Timer.find({ user_id });
+    const query = Timer.find({ user_id }).select('time');
   
     if (filter) {
       query.where(filter);
