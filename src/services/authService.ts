@@ -19,5 +19,5 @@ export const loginUser = async (email: string, password: string): Promise<string
     throw new Error('Invalid email or password');
   }
 
-  return generateToken(user._id.toString(), user.role);
+  return generateToken(user._id);
 };
