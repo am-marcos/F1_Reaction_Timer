@@ -16,5 +16,5 @@ export const getReactionTimes = async (user_id: string, sort: string, filter: an
       query.sort(sort);
     }
   
-    return await query.populate('user_id').exec();
+    return await query.exec();
 };
