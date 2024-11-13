@@ -6,13 +6,13 @@ export const authMiddleware = (req: RequestAuth, res: Response, next: NextFuncti
     const token = req.header('Authorization')?.replace('Bearer ', '');
     if (!token) {
         res.status(401).send('Accès refusé. Aucun token fourni.');
-        return
+        return;
     }
 
     try {
         const decoded = verifyToken(token);
         console.log(decoded);
-        
+
         req.user = decoded;
         next();
     } catch (err) {

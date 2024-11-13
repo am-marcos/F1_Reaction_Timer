@@ -1,5 +1,8 @@
 import { Router } from 'express';
-import { submitReactionTimeController, getReactionTimesController } from '../controllers/timerController';
+import {
+    submitReactionTimeController,
+    getReactionTimesController,
+} from '../controllers/timerController';
 import { authMiddleware } from '../middleware/authMiddleware';
 
 const router = Router();

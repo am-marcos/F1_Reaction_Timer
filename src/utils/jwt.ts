@@ -8,6 +8,6 @@ export const generateToken = (userId: string) => {
 
 export const verifyToken = (token: string) => {
     console.log(SECRET_KEY);
-    
+
     return jwt.verify(token, SECRET_KEY);
 };
